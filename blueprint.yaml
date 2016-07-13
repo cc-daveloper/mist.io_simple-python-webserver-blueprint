@@ -46,7 +46,7 @@ node_templates:
           api_token: { get_input: api_token }
       parameters:
           cloud_id: { get_input: cloud_id }
-          machine_name: { get_input: machine_name }
+          name: { get_input: machine_name }
           image_id: { get_input: image_id }
           size_id: { get_input: size_id }
 
