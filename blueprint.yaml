@@ -11,9 +11,20 @@ inputs:
     description: >
       The HTTP web server port.
     default: 8000
-
   host_ip:
     default: localhost
+  mist_uri:
+    description: The mist custom uri
+    default: 'https://mist.io'
+  username:
+    description: Mist.io username
+    default: ''
+  password:
+    description: Mist.io password
+    default: ''
+  api_token:
+    description: Mist.io api token
+    default: ''
 
 
 node_templates:
@@ -22,6 +33,8 @@ node_templates:
     properties:
       ip: { get_input: host_ip }
       install_agent: false
+      mist_uri: { get_input: mist_uri }
+      api_token: { get_input: api_token }
 
   http_web_server:
     type: cloudify.nodes.WebServer
