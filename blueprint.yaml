@@ -25,6 +25,8 @@ inputs:
   api_token:
     description: Mist.io api token
     default: ''
+  cloud_id:
+    default: ''
 
 
 node_templates:
@@ -36,6 +38,8 @@ node_templates:
       mist_config:
           mist_uri: { get_input: mist_uri }
           api_token: { get_input: api_token }
+      parameters:
+          cloud_id: { get_input: cloud_id }
 
   http_web_server:
     type: cloudify.nodes.WebServer
