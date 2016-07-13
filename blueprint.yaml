@@ -34,7 +34,7 @@ node_templates:
       ip: { get_input: host_ip }
       install_agent: false
       mist_config:
-          mist_user: { get_input: mist_uri }
+          mist_uri: { get_input: mist_uri }
           api_token: { get_input: api_token }
 
   http_web_server:
