@@ -33,8 +33,9 @@ node_templates:
     properties:
       ip: { get_input: host_ip }
       install_agent: false
-      mist_uri: { get_input: mist_uri }
-      api_token: { get_input: api_token }
+      mist_config:
+          mist_user: { get_input: mist_uri }
+          api_token: { get_input: api_token }
 
   http_web_server:
     type: cloudify.nodes.WebServer
