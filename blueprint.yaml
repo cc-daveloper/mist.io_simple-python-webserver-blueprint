@@ -18,7 +18,7 @@ inputs:
 
 node_templates:
   host:
-    type: cloudify.nodes.Compute
+    type: cloudify.mist.nodes.Server
     properties:
       ip: { get_input: host_ip }
       install_agent: false
