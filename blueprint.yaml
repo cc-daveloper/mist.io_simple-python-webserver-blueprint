@@ -27,6 +27,12 @@ inputs:
     default: ''
   cloud_id:
     default: ''
+  machine_name:
+    default: 'yolomachine'
+  image_id:
+    default: ''
+  size_id:
+    default: ''
 
 
 node_templates:
@@ -40,6 +46,9 @@ node_templates:
           api_token: { get_input: api_token }
       parameters:
           cloud_id: { get_input: cloud_id }
+          machine_name: { get_input: machine_name }
+          image_id: { get_input: image_id }
+          size_id: { get_input: size_id }
 
   http_web_server:
     type: cloudify.nodes.WebServer
