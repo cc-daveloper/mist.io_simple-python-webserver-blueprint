@@ -33,6 +33,8 @@ inputs:
     default: ''
   size_id:
     default: ''
+  location_id:
+    default: ''
   key_id:
     default: ''
 
@@ -51,6 +53,7 @@ node_templates:
           name: { get_input: machine_name }
           image_id: { get_input: image_id }
           size_id: { get_input: size_id }
+          location_id: { get_input: location_id }
           key: { get_input: key_id }
 
   http_web_server:
