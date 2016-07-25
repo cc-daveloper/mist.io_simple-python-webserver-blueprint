@@ -51,10 +51,10 @@ node_templates:
       parameters:
           cloud_id: { get_input: mist_cloud }
           name: { get_input: machine_name }
-          image_id: { get_input: image_id }
-          size_id: { get_input: size_id }
-          location_id: { get_input: location_id }
-          key: { get_input: key_id }
+          image_id: { get_input: mist_image }
+          size_id: { get_input: mist_size }
+          location_id: { get_input: mist_location }
+          key: { get_input: mist_key }
 
   http_web_server:
     type: cloudify.nodes.WebServer
