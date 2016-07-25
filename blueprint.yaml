@@ -3,7 +3,7 @@ tosca_definitions_version: cloudify_dsl_1_2
 
 imports:
   - http://www.getcloudify.org/spec/cloudify/3.3.1/types.yaml
-  - http://raw.githubusercontent.com/mistio/cloudify-mist-plugin/reform_kube/plugin.yaml
+  - http://raw.githubusercontent.com/mistio/cloudify-mist-plugin/reform_inputs/plugin.yaml
 
 
 inputs:
@@ -47,7 +47,7 @@ node_templates:
       install_agent: false
       mist_config:
           mist_uri: { get_input: mist_uri }
-          api_token: { get_input: mist_token }
+          mist_token: { get_input: mist_token }
       parameters:
           cloud_id: { get_input: mist_cloud }
           name: { get_input: machine_name }
