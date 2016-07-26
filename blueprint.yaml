@@ -35,15 +35,12 @@ inputs:
     description: >
       The HTTP web server port.
     default: 8000
-  host_ip:
-    default: localhost
 
 
 node_templates:
   host:
     type: cloudify.mist.nodes.Server
     properties:
-      ip: { get_input: host_ip }
       install_agent: false
       mist_config:
           mist_uri: { get_input: mist_uri }
