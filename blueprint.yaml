@@ -68,7 +68,7 @@ node_templates:
 outputs:
   http_endpoint:
     description: Web server external endpoint
-    value: { concat: ['http://', { get_property: [ host, ip ] },
+    value: { concat: ['http://', { get_attribute: [ host, ip ] },
                       ':', { get_property: [http_web_server, port] }] }
 
 workflows:
