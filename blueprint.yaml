@@ -3,7 +3,7 @@ tosca_definitions_version: cloudify_dsl_1_2
 
 imports:
   - http://www.getcloudify.org/spec/cloudify/3.3.1/types.yaml
-  - http://raw.githubusercontent.com/mistio/cloudify-mist-plugin/master/plugin.yaml
+  - http://raw.githubusercontent.com/mistio/cloudify-mist-plugin/job_id/plugin.yaml
 
 
 inputs:
@@ -18,6 +18,8 @@ inputs:
     default: ''
   mist_token:
     description: Mist.io api token
+    default: ''
+  mist_job_id:
     default: ''
   mist_cloud:
     default: ''
@@ -45,6 +47,7 @@ node_templates:
       mist_config:
           mist_uri: { get_input: mist_uri }
           mist_token: { get_input: mist_token }
+          mist_job_id: { get_input: mist_job_id }
       parameters:
           cloud_id: { get_input: mist_cloud }
           name: { get_input: machine_name }
